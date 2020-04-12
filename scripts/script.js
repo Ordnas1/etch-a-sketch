@@ -1,10 +1,25 @@
-const GRIDTOTAL = 16 * 16;
+/* Main JS script
+*  fill the grid and handles grid effects */
 
-let gridContainer = document.querySelector('#grid-container');
-let gridElem = document.createElement('div');
+let gridTotal = 16 * 16;
 
-for (let i = 0; i < GRIDTOTAL ; i++) {
+const gridContainer = document.querySelector('#grid-container');
+
+for (let i = 0; i < gridTotal ; i++) {
     let gridElem = document.createElement('div');
-    gridElem.classList.add('grid-elem')
+    gridElem.classList.add('grid-elem');
     gridContainer.appendChild(gridElem);
 }
+
+function changeGridColor(e) {
+    e.target.style.cssText = "background-color: black;";
+}
+
+
+const gridElements = document.querySelectorAll('.grid-elem');
+
+gridElements.forEach((elem) => {
+    elem.addEventListener('mouseover', (e) => {
+        changeGridColor(e)
+    })
+})
