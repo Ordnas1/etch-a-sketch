@@ -11,6 +11,8 @@ for (let i = 0; i < gridTotal ; i++) {
     gridContainer.appendChild(gridElem);
 }
 
+
+
 function changeGridColor(e) {
     e.target.style.cssText = "background-color: black;";
 }
