@@ -18,7 +18,9 @@ const ORIGINALGRIDSIDE = 16;
 loadGrid(ORIGINALGRIDSIDE)
 
 function changeGridColor(e) {
-    e.target.style.cssText = "background-color: black;";
+    e.target.style.cssText = `background-color: hsl(${Math.floor(Math.random() * 360)}
+                                                    ,${Math.floor(Math.random() * 100) + '%'}
+                                                    ,${Math.floor(Math.random() * 100) + '%'});`;
 }
 
 
